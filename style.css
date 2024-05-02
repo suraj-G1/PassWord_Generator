@@ -1,0 +1,206 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    height: 100vh;
+    width: 100vw;
+}
+
+.container{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* background-color: rgb(14, 14, 82); */
+    gap: 1rem;
+    background: linear-gradient(231deg,rgba(22,6,40,1)0%,rgba(52,28,79,1)50%,rgba(88,7,125,1)100%);
+}
+.name{
+    
+    font-size: 23px;
+    /* background-color: black; */
+    color: white;
+    padding: 0.5rem 1rem;
+    opacity: 0.75;
+    border-radius: 10px;
+    letter-spacing: 2px;
+    min-width: 280px;
+    text-transform: uppercase;
+    line-height: 1.2;
+}
+.display{
+    background-color:transparent;
+    outline: none;
+    color: white;
+    border: none;
+    font-weight: 600;
+    font-size: 1rem;
+    line-height: 10px;
+    /* text-transform: uppercase; */
+    
+}
+.display::placeholder{
+    position: absolute;
+    color: rgb(238, 238, 110);
+    opacity: 0.75;
+    text-transform: uppercase; 
+}
+
+
+.display-container{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    min-width: 280px;
+    background-color: black;
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+    border-bottom: 1px solid violet;
+
+}
+
+.input-container{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    min-width: 280px;
+    background-color: black;
+    padding: 2rem 1rem;
+    border-radius: 10px;
+    color: white;
+    
+}
+
+.length-container{
+    display: flex;
+    justify-content: space-between;
+}
+
+.length-container p:nth-child(2){
+    color:yellow;
+}
+
+.slider{
+    appearance: none;
+    cursor:pointer;
+    height: 0.75rem;
+    /* background-color: violet; */
+    border-radius: 1rem;
+    margin-top: 0.5rem;
+    background-image: linear-gradient(rgb(91, 19, 91),rgb(99, 8, 99));
+    background-repeat: no-repeat;
+}
+
+.slider:focus{
+    border: 1px solid yellow;
+}
+
+.slider::-webkit-slider-thumb{
+    appearance: none;
+    height: 1.2rem;
+    width: 1.2rem;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: yellow;
+    transition: all 100ms ease-in;
+}
+
+
+
+.slider::-webkit-slider-thumb:hover{
+    background-color: rgb(191, 60, 60);
+    box-shadow: 0px 0px 5px 5px rgba(255, 229, 61, 0.80);
+}
+
+.strength-container{
+    display: flex;
+    justify-content: space-between;
+}
+.indicator{
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background-color:white; 
+    /* box-shadow: 5px 5px 5px 5px rgba(22,6,40,1);
+    display: flex;
+    align-items: center;
+    justify-content: center; */
+}
+.copymsg{
+    position: absolute;
+    background-color: red;
+    color: rgb(221, 118, 135);
+    background-color: aqua;
+     top: -28px;
+    left: -13px; 
+    opacity: 0; 
+    border-radius: 1rem;
+    padding: 5px 5px;
+    transform: scale(1);
+    transform-origin: bottom;
+    transition:all 250ms ease-in-out;
+}
+.copymsg.active{
+    opacity: 1;
+    transform: scale(1);
+}
+.copyButton{
+    position: relative;
+    background-color: white;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+}
+
+/* Chech Box css */
+.check{
+    display: flex;  
+     align-items: center;
+}
+.check input{
+    
+    height: 18px;
+    width: 18px;
+    border:1px solid cyan;
+    position: relative;
+    border-radius: 0.35rem;
+}
+.check label{
+    margin:0  0.5rem;
+}
+.check input:checked{
+    background-color: rgb(9, 92, 92);
+}
+
+.check input:checked::before{
+    content :"✓";
+    position: absolute;
+    left: -50%;
+    top: -3.5px;
+    transform: translateX(-50%) translateY(-40%);
+}
+.generatePassButton{
+    margin: 5px 5px;
+    padding: 8px 0;
+    border-radius: 5px;
+    font-weight: 600;
+    font-size: 15px;
+    cursor: pointer;
+    font-weight: 700;
+    color: yellow;
+    background-color: blueviolet;
+    font-size: 16px;
+    border-bottom: 0.1rem solid yellow;
+    /* text-transform: uppercase; */
+
+}
